@@ -8,7 +8,6 @@ st.image('https://www.lendingtree.com/content/uploads/2020/01/mortgage-default-1
 
 
 # Textbox for user input
-number = st.number_input("How good is your predictive model? Enter the percentage of FP (false positives): (formula = (1 - specificity)", min_value=0)
 
 error_rate = 1 - number
 baseline = 0.05
@@ -24,7 +23,8 @@ models2 = {'Cost with predictive models' : cost,
 
 if(st.button('Calculate')):
 # Show the result
-    st.write(f'Cost with predictive models: {cost :.3f} million', f'Cost without models: {cost_baseline :.3f} million', f'The total saving to the UK Banking industry from incorrect Loan Classification is: {savings :.3f} million.')
+           number = st.number_input("How good is your predictive model? Enter the percentage of FP (false positives): (formula = (1 - specificity)", min_value=0)
+           st.write(f'Cost with predictive models: {cost :.3f} million', f'Cost without models: {cost_baseline :.3f} million', f'The total saving to the UK Banking industry from incorrect Loan Classification is: {savings :.3f} million.')
 
 # Create a button, that when clicked, shows a text
 if(st.button("About")):
