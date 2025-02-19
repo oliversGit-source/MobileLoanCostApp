@@ -17,7 +17,7 @@ cost = (int(0.35*200442*279606*error_rate))/1000000
 cost_baseline = (int(0.35*200442*279606*0.05))/1000000
 savings = (cost_baseline - cost)
 
-#create a dataframe
+#create a dictionary
 models2 = {'Cost with predictive models' : cost, 
            'Cost without models': cost_baseline, 
                'Total annual saving': savings}
