@@ -18,7 +18,7 @@ cost_baseline = (int(0.35*200442*279606*0.05)) / 1000000
 savings = (cost_baseline - cost)
 
 # Show the result
-st.write(f'Cost with predictive models: {cost :.3f} million', f'Cost without models: {cost_baseline :.3f} million', f'The total saving to the UK Banking industry from incorrect Loan Classification is: {savings :.3f} million.')
+st.text(f'Cost with predictive models: {cost :.3f} million', f'Cost without models: {cost_baseline :.3f} million', f'The total saving to the UK Banking industry from incorrect Loan Classification is: {savings :.3f} million.')
 
 # Create a button, that when clicked, shows a text
 if(st.button("About")):
