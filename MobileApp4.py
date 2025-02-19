@@ -22,18 +22,9 @@ models2 = {'Cost with predictive models' : cost,
            'Cost without models': cost_baseline, 
            'Total annual saving': savings}
 
-dct = {k:[v] for k,v in models2.items()}
-df_cost = pd.DataFrame(dct)
-
-if st.checkbox('Show savings comparison'):
-    st.bar_chart(df_cost, y_label = 'Money saved in £')
-
 if number >= 0:
 # Show the result
            st.write(f'Cost with predictive models: {cost :.3f} million', f'Cost without models: {cost_baseline :.3f} million', f'The total saving to the UK Banking industry from incorrect Loan Classification is: {savings :.3f} million.')
-
-if st.checkbox('Show savings comparison'):
-    st.bar_chart(df_cost, y_label = 'Money saved in £')
 
 # Create a button, that when clicked, shows a text
 if(st.button("About")):
