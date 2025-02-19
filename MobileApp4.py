@@ -22,7 +22,7 @@ models2 = {'Cost with predictive models' : cost,
            'Cost without models': cost_baseline, 
            'Total annual saving': savings}
 
-if number = True:
+if number == True:
 # Show the result
            st.write(f'Cost with predictive models: {cost :.3f} million', f'Cost without models: {cost_baseline :.3f} million', f'The total saving to the UK Banking industry from incorrect Loan Classification is: {savings :.3f} million.')
 
