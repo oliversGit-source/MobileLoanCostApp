@@ -10,7 +10,7 @@ st.image('https://www.lendingtree.com/content/uploads/2020/01/mortgage-default-1
 # Textbox for user input
 number = st.number_input("How good is your predictive model? Enter the decimal percentage of false positives: (formula = (1 - specificity) Hint. Type in 0.999, that's the one from my best ML model ;)):", min_value=0)
 
-error_rate = int(1 - number)
+error_rate = number
 baseline = 0.05
 # Calculation (example: square the number)
 cost = (int(0.35*200442*279606*error_rate))/1000000
