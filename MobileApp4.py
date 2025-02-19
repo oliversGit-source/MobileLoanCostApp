@@ -13,8 +13,8 @@ number = st.number_input("How good is your predictive model? Enter the decimal p
 error_rate = 1 - number
 baseline = 0.05
 # Calculation (example: square the number)
-cost = (int(0.35*200442*279606*error_rate)) / 1000000
-cost_baseline = (int(0.35*200442*279606*0.05)) / 1000000
+cost = (int(0.35*200442*279606*error_rate)) / 1000
+cost_baseline = (int(0.35*200442*279606*0.05)) / 1000
 savings = (cost - cost_baseline)
 
 #create a dictionary
