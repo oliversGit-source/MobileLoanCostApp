@@ -38,20 +38,21 @@ if(st.button('Calculate')):
 if(st.button("About")):
     st.text("This is an online mobile app created by Oliver Butterworth-Bakhshi for an Imperial Business School Data Analytics Project. All rights reserved©.")
 
-collector = FeedbackCollector()
-collector.st_feedback(feedback_type="issue")
-q1 = st.text_input("Write some thoughts about the app here.")
-if q1:
-           button = st.button(label="Submit Feedback")
-           if button:
-        feedback = collector.st_feedback(
-            "custom",
-            user_response={
-                "Write some thoughts about the app here.": q1,
-            },
-            path="./feedback.json",
-        )
-        feedback.dict() if feedback else None
+if(st.button('Feedback')):
+           collector = FeedbackCollector()
+           collector.st_feedback(feedback_type="issue")
+           q1 = st.text_input("Write some thoughts about the app here.")
+           if q1:
+                      button = st.button(label="Submit Feedback")
+                      if button:
+                   feedback = collector.st_feedback(
+                       "custom",
+                       user_response={
+                           "Write some thoughts about the app here.": q1,
+                       },
+                       path="./feedback.json",
+                   )
+                   feedback.dict() if feedback else None
 
 sentiment_mapping = [":material/thumb_down:", ":material/thumb_up:"]
 selected = st.feedback("thumbs")
