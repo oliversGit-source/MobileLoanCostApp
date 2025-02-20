@@ -2,9 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-pip install "trubrics[streamlit]"==1.3.6
-from trubrics.integrations.streamlit import FeedbackCollector
-
 st.title('Loan Classification Predictive Model: \n How much do you think incorrect Loan Approval costs the UK Banking sector annually?')
 
 st.image('https://www.lendingtree.com/content/uploads/2020/01/mortgage-default-1140x524.jpg')
@@ -36,6 +33,8 @@ if(st.button('Calculate')):
 # Create a button, that when clicked, shows a text
 if(st.button("About")):
     st.text("This is an online mobile app created by Oliver Butterworth-Bakhshi for an Imperial Business School Data Analytics Project. All rights reserved©.")
+
+from trubrics.integrations.streamlit import FeedbackCollector
 
 if(st.button('Feedback')):
            collector = FeedbackCollector()
