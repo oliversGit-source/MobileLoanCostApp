@@ -34,11 +34,6 @@ if(st.button('Calculate')):
 if(st.button("About")):
     st.text("This is an online mobile app created by Oliver Butterworth-Bakhshi for an Imperial Business School Data Analytics Project. All rights reserved©.")
 
-from trubrics.integrations.streamlit import FeedbackCollector
-
-collector = FeedbackCollector()
-collector.st_feedback(feedback_type="issue")
-
 sentiment_mapping = [":material/thumb_down:", ":material/thumb_up:"]
 selected = st.feedback("thumbs")
 if selected is not None:
