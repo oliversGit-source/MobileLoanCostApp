@@ -6,9 +6,9 @@ st.title('Loan Classification Predictive Model: \n How much do you think incorre
 
 st.image('https://www.lendingtree.com/content/uploads/2020/01/mortgage-default-1140x524.jpg')
 
-st.write(f'Precision Specificity measures the proportion of actual negative instances that were correctly identified by the classifier'. 
-           \n f'It provides insight into the classifier’s ability to avoid false positives.'
-           \n f'The best performing predictive model in this study had a specificity of 0.999.')
+st.write("Precision Specificity measures the proportion of actual negative instances that were correctly identified by the classifier. 
+           \n It provides insight into the classifier’s ability to avoid false positives.
+           \n The best performing predictive model in this study had a specificity of 0.999.")
 
 # Textbox for user input
 number = st.number_input("How good is your predictive model? Enter the specificity of your model below, and then click the 'Calculate' button.")
