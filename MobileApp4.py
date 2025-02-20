@@ -2,6 +2,10 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+pip install "trubrics[streamlit]"==1.3.6
+
+from trubrics.integrations.streamlit import FeedbackCollector
+
 st.title('Loan Classification Predictive Model: \n How much do you think incorrect Loan Approval costs the UK Banking sector annually?')
 
 st.image('https://www.lendingtree.com/content/uploads/2020/01/mortgage-default-1140x524.jpg')
@@ -34,6 +38,20 @@ if(st.button('Calculate')):
 if(st.button("About")):
     st.text("This is an online mobile app created by Oliver Butterworth-Bakhshi for an Imperial Business School Data Analytics Project. All rights reserved©.")
 
+collector = FeedbackCollector()
+collector.st_feedback(feedback_type="issue")
+q1 = st.text_input("Write some thoughts about the app here.")
+if q1:
+           button = st.button(label="Submit Feedback")
+           if button:
+        feedback = collector.st_feedback(
+            "custom",
+            user_response={
+                "Write some thoughts about the app here.": q1,
+            },
+            path="./feedback.json",
+        )
+        feedback.dict() if feedback else None
 
 sentiment_mapping = [":material/thumb_down:", ":material/thumb_up:"]
 selected = st.feedback("thumbs")
