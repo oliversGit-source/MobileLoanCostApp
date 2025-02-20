@@ -28,7 +28,7 @@ models2 = {'Cost with predictive models' : cost_in_mill,
 
 if(st.button('Calculate')):
 # Show the result
-           st.write(f'Cost with predictive model: {cost_in_mill :.3f} million', f'Cost without predictive models: {cost_baseline_in_mill :.3f} million', f'The total saving to the UK Banking industry from incorrect Loan Classification using this predictive ML model is: {savings :.3f} million.')
+           st.write(f'Cost with predictive model: {cost_in_mill :.3f} million', f'Cost without predictive models: {cost_baseline_in_mill :.3f} million', f'**The total saving to the UK Banking industry from incorrect Loan Classification using this predictive ML model is: {savings :.3f} million.**')
 
 # Create a button, that when clicked, shows a text
 if(st.button("About")):
