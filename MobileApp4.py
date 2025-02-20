@@ -35,7 +35,9 @@ if(st.button("About")):
     st.text("This is an online mobile app created by Oliver Butterworth-Bakhshi for an Imperial Business School Data Analytics Project.")
 
 
-sentiment_mapping = [":material/thumb_down:", ":material/thumb_up:"]
-selected = st.feedback("thumbs")
-if selected is not None:
-    st.markdown(f"You selected: {sentiment_mapping[selected]}")
+# Collect user feedback
+feedback = streamlit_feedback(feedback_type="thumbs", optional_text_label="[Optional] Please provide an explanation", on_submit=on_submit)
+                
+# Get user feedback and store it
+if feedback is not None:
+           on_submit(feedback)
