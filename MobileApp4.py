@@ -36,7 +36,7 @@ if(st.button("About")):
 
 
 sentiment_mapping = [":material/thumb_down:", ":material/thumb_up:"]
-selected = st.feedback("thumbs", optional_text_label="[Optional] Please provide feedback:", on_submit=on_submit)
+selected = st.feedback("thumbs", optional_text_label="[Optional] Please provide feedback:")
 if selected is not None:
     st.markdown(f"You selected: {sentiment_mapping[selected]}")
     on_submit(selected)
