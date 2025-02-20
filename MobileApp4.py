@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-pip install "trubrics[streamlit]"==1.3.6
-
 from trubrics.integrations.streamlit import FeedbackCollector
 
 st.title('Loan Classification Predictive Model: \n How much do you think incorrect Loan Approval costs the UK Banking sector annually?')
