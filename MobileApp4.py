@@ -10,7 +10,9 @@ st.text("Precision Specificity measures the proportion of actual negative instan
 
 # Textbox for user input
 number = st.number_input("How good is your predictive model? Enter the specificity of your model below, and then click the 'Calculate' button.", min_value=0)
- 
+
+st.write("The number is:", number)
+
 error_rate = 1 - number
 baseline = 0.05
 # Calculation (example: square the number)
