@@ -9,11 +9,11 @@ st.image('https://www.lendingtree.com/content/uploads/2020/01/mortgage-default-1
 st.text("Precision Specificity measures the proportion of actual negative instances that were correctly identified by the classifier. It provides insight into the classifier’s ability to avoid false positives.")
 
 # Textbox for user input
-number = float(st.number_input("How good is your predictive model? Enter the specificity of your model below, and then click the 'Calculate' button.", min_value=0))
+number = st.number_input("How good is your predictive model? Enter the specificity of your model below, and then click the 'Calculate' button.")
 
 st.write("The number is:", number)
 
-error_rate = float(1 - number)
+error_rate = (1 - number)
 baseline = 0.05
 # Calculation (example: square the number)
 factor = (0.35*200442*279606)/1000000
