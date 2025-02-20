@@ -8,7 +8,7 @@ st.image('https://www.lendingtree.com/content/uploads/2020/01/mortgage-default-1
 
 
 # Textbox for user input
-number = st.number_input("How good is your predictive model? Enter the percentage of FP (false positives): (formula = (1 - specificity)", min_value=0):
+number = st.number_input("How good is your predictive model? Enter the percentage of FP (false positives): (formula = (1 - specificity)", min_value=0)
 
 
 if(st.button('Calculate')):
