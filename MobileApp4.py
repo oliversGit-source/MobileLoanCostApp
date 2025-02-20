@@ -6,9 +6,12 @@ st.title('Loan Classification Predictive Model: \n How much do you think incorre
 
 st.image('https://www.lendingtree.com/content/uploads/2020/01/mortgage-default-1140x524.jpg')
 
+st.write(f'Precision Specificity measures the proportion of actual negative instances that were correctly identified by the classifier. It complements recall by focusing on the negative class, providing insight into the classifier’s ability to avoid false positives.
+Specificity, also known as the True Negative Rate (TNR), measures the proportion of actual negative instances that are correctly identified as negative by a model. It reflects how well the model avoids false positives.
+Specificity = 𝑇𝑁/𝑇𝑁+𝐹𝑃')
 
 # Textbox for user input
-number = st.number_input("How good is your predictive model? Enter the percentage of FP (false positives): (formula = (1 - specificity)", min_value=0)
+number = st.number_input("How good is your predictive model? Enter the specificity of your model:", min_value=0)
 
 
 if(st.button('Calculate')):
@@ -17,8 +20,8 @@ if(st.button('Calculate')):
            error_rate = 1 - number
            baseline = 0.05
            # Calculation (example: square the number)
-           cost = int(0.35*200442*279606*error_rate)
-           cost_baseline = int(0.35*200442*279606*0.05)
+           cost = int(0.35*200442*279606*error_rate)/1000000
+           cost_baseline = int(0.35*200442*279606*0.05)/1000000
            savings = (cost_baseline - cost)
 
 
