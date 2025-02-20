@@ -43,14 +43,14 @@ if(st.button('Feedback')):
            if q1:
                       button = st.button(label="Submit Feedback")
                       if button:
-                   feedback = collector.st_feedback(
-                       "custom",
-                       user_response={
-                           "Write some thoughts about the app here.": q1,
-                       },
-                       path="./feedback.json",
-                   )
-                   feedback.dict() if feedback else None
+                                 feedback = collector.st_feedback(
+                                 "custom",
+                                 user_response={
+                                 "Write some thoughts about the app here.": q1,
+                                 },
+                                 path="./feedback.json",
+                                 )
+                                 feedback.dict() if feedback else None
 
 sentiment_mapping = [":material/thumb_down:", ":material/thumb_up:"]
 selected = st.feedback("thumbs")
