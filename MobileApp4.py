@@ -32,7 +32,7 @@ if(st.button('Calculate')):
 
 # Create a button, that when clicked, shows a text
 if(st.button("About")):
-    st.text("This is an online mobile app created by Oliver Butterworth-Bakhshi© for an Imperial Business School Data Analytics Project. All rights reserved.")
+    st.text("This is an online mobile app created by Oliver Butterworth-Bakhshi for an Imperial Business School Data Analytics Project. All rights reserved©.")
 
 
 sentiment_mapping = [":material/thumb_down:", ":material/thumb_up:"]
