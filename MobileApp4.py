@@ -19,9 +19,9 @@ if(st.button('Calculate')):
            baseline = 0.05
            # Calculation (example: square the number)
            cost = int(0.35*200442*279606*error_rate)
-           cost_in_mill = cost/1000000
+           cost_in_mill = 4
            cost_baseline = int(0.35*200442*279606*0.05)
-           cost_baseline_in_mill = cost_baseline/1000000
+           cost_baseline_in_mill = 5
            savings = (cost_baseline_in_mill - cost_in_mill)
 
 
